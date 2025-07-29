@@ -30,7 +30,8 @@ A responsive and modern pricing plan UI built with HTML, CSS, and JavaScript. Th
 
 ## 🖼️ Preview
 
-![Preview](preview.png)
+![Preview](https://github.com/user-attachments/assets/3f981c82-1fbe-42b8-acec-c82580293dcf)
+
 
 ## 🧠 How it Works
 
