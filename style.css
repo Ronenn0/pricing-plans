@@ -1,0 +1,193 @@
+:root {
+    --background-color: #181818;
+    --card-background: #252525;
+
+    --light-green: #00ff95;
+    --dark-green: #00ff803d;
+
+    --light-primary-color: var(--light-green);
+    /* can be changed */
+    --dark-primary-color: var(--dark-green);
+    /* can be changed */
+
+    --default-text-color: rgb(145, 145, 145);
+    --dark-text-color: #999999;
+    --red: #ff4d4d;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.4px;
+}
+
+html {
+    background-color: var(--background-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100vw;
+    color: var(--default-text-color);
+}
+
+main h1 {
+    color: var(--light-primary-color);
+    font-size: 3rem;
+}
+
+main h2 {
+    font-size: 1.1rem;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    justify-content: center;
+    gap: 15px;
+    color: var(--default-text-color);
+    font-family: inherit;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    border: 1px solid var(--card-background);
+    transition: all 0.2s;
+}
+
+.card:hover {
+    border-color: var(--light-primary-color);
+    transform: translateY(-5px);
+    scale: 1.02;
+}
+
+.card .most-popular {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 0.7rem;
+    color: #222;
+    background-color: var(--light-primary-color);
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.card h4.explaination {
+    font-size: 1rem;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.cards .card>i {
+    width: 60px;
+    height: 60px;
+    color: var(--light-primary-color);
+    background-color: var(--dark-primary-color);
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards .card>i::before {
+    scale: 1.3;
+}
+
+.card .plan-title {
+    color: #ddd;
+}
+
+.card .price {
+    font-size: 4rem;
+    color: var(--light-primary-color);
+    display: flex;
+    gap: 2px;
+}
+
+.card .price::before {
+    content: '$';
+    color: inherit;
+    font-size: 1.2rem;
+    transform: translateY(11px);
+}
+
+.card .price::after {
+    content: '/month';
+    font-size: 0.8rem;
+    align-self: flex-end;
+    transform: translateY(-11px);
+}
+
+.card ul.plan-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 15px;
+    align-self: flex-start;
+    font-size: 1.1rem;
+    color: #ccc;
+    border-top: 1px solid #2c2c2c;
+    width: 100%;
+
+    & i {
+        margin-right: 5px;
+    }
+
+    & i.fa-check::before {
+        color: var(--light-green);
+    }
+
+    & i.fa-times::before {
+        color: var(--red);
+    }
+
+    & i.fa-times+span {
+        opacity: 0.5;
+    }
+}
+
+.card button.get-started {
+    font-size: 0.8rem;
+    color: #ccc;
+    background-color: #333;
+    border: none;
+    align-self: stretch;
+    padding: 13px 10px;
+    margin: 13px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 3px solid rgba(0, 94, 0, 0);
+}
+
+.card:hover button.get-started {
+    color: #222;
+    background-color: var(--light-primary-color);
+    border-color: rgba(0, 94, 0, 0.61);
+}
